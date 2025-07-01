@@ -1,0 +1,147 @@
+/* Reset some basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page background and base font */
+body {
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* General form styling */
+.new_item-form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px 25px;
+  background: #796fce;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: white;
+}
+
+/* Form row container */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+.form-row label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* Input styling */
+.form-row input[type="text"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+/* Input focus state */
+.form-row input[type="text"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* List styling */
+.list {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: background 0.2s ease;
+}
+
+.list li:hover {
+  background: #f5f5f5;
+}
+
+/* Label inside list item */
+.list li label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #357bd8;
+}
+
+/* Danger button */
+.btn-danger {
+  background-color: #e74c3c;
+  margin-left: 10px;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .new_item-form,
+  .list {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .btn-danger {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
